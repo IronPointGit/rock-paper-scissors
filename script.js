@@ -12,17 +12,6 @@ let getComputerChoice = () => {
 };
 
 
-let getHumanChoice = () => {
-    let choice = prompt("Input your choice");
-    if (choice === null) {
-        console.log('please input a choice');
-        getHumanChoice();
-    }
-    else {
-        return choice;
-    }
-    
-};
 
 let humanScore = 0;
 let computerScore = 0;
@@ -90,5 +79,3 @@ scissors.addEventListener ("click", () => {
 });
 
 
-
-//playGame();
