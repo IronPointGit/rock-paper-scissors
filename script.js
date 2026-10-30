@@ -28,9 +28,6 @@ let humanScore = 0;
 let computerScore = 0;
 
 let playRound = (humanChoice, computerChoice) => {
-    humanChoice = getHumanChoice().toLowerCase();
-    computerChoice = getComputerChoice();
-    
     if (humanChoice === computerChoice) {
         console.log("Its a draw! Play again");
        
@@ -62,6 +59,23 @@ let playRound = (humanChoice, computerChoice) => {
 
 };
 
+const rock = document.querySelector("#rock");
+rock.addEventListener ("click", () => {
+    playRound('rock', getComputerChoice());
+});
+
+const paper = document.querySelector("#paper");
+paper.addEventListener ("click", () => {
+    playRound('paper', getComputerChoice());
+});
+
+const scissors = document.querySelector("#scissors");
+scissors.addEventListener ("click", () => {
+    playRound('scissors', getComputerChoice());
+});
+
+
+
 
 
 let playGame = () => {
@@ -82,4 +96,4 @@ let playGame = () => {
     }
 }
 
-playGame();
+//playGame();
